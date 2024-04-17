@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Multi-step form</title>
+
+</head>
+
+<body>
+  <main class="main">
+    <!-- step selection container goes here  -->
+    <div class="sidebar">
+      <div class="steps-container">
+        <div class="step">
+          <span class="step-num">1</span>
+          <div class="step-details">
+            <span class="step-heading">step 1</span>
+            <span class="step-title">your info</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-num">2</span>
+          <div class="step-details">
+            <span class="step-heading">step 2</span>
+            <span class="step-title">select plan</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-num">3</span>
+          <div class="step-details">
+            <span class="step-heading">step 3</span>
+            <span class="step-title">add-ons</span>
+          </div>
+        </div>
+
+        <div class="step">
+          <span class="step-num">4</span>
+          <div class="step-details">
+            <span class="step-heading">step 4</span>
+            <span class="step-title">summary</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- content for each steps goes here  -->
+    <div class="outlet">
+      <div class="outlet-top-container">
+        <div class="content">
+          <h2 class="content-title">Personal info</h2>
+
+          <p class="content-info">Please provide your name, email address, and phone number.</p>
+
+          <label for="userName">
+            <div>
+              <span class="input-title">Name</span>
+              <span id="nameErr" class="input-err">The field is required</span>
+            </div>
+            <input id="userName" name="userName" type="text" placeholder="e.g. Stephen King" autocomplete="off" />
+          </label>
+
+          <label for="userEmail">
+            <div>
+              <span class="input-title">Email Address</span>
+              <span id="emailErr" class="input-err">The field is required</span>
+            </div>
+
+            <input id="userEmail" name="userEmail" type="email" placeholder="e.g. stephenking@lorem.com"
+              autocomplete="off" />
+          </label>
+
+          <label for="userPhoneNumber">
+            <div>
+              <span class="input-title">Phone Number</span>
+              <span id="phoneNumErr" class="input-err">The field is required</span>
+            </div>
+            <input id="userPhoneNumber" name="userPhoneNumber" type="tel" placeholder="e.g. 1234567890"
+              autocomplete="off" />
+          </label>
+        </div>
+
+        <div class="content hide">
+          <h2 class="content-title">Select your plan</h2>
+
+          <p class="content-info">You have the option of monthly or yearly billing.</p>
+
+          <div class="plans-wrapper">
+            <div class="plan">
+              <img class="plan-icon" src="./assets/images/icon-arcade.svg" alt="Arcade icon">
+              <div class="plan-details">
+                <span class="plan-title">Arcade</span>
+                <span class="plan-price">$9/mo</span>
+                <span class="plan-months-free"></span>
+              </div>
+            </div>
+
+            <div class="plan">
+              <img class="plan-icon" src="./assets/images/icon-advanced.svg" alt="Advanced icon">
+              <div class="plan-details">
+                <span class="plan-title">Advanced</span>
+                <span class="plan-price">$12/mo</span>
+                <span class="plan-months-free"></span>
+              </div>
+            </div>
+
+            <div class="plan">
+              <img class="plan-icon" src="./assets/images/icon-pro.svg" alt="Pro icon">
+              <div class="plan-details">
+                <span class="plan-title">Pro</span>
+                <span class="plan-price">$15/mo</span>
+                <span class="plan-months-free"></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="plan-billing-toggle-box">
+            <span class="monthly-text text-marine-blue">Monthly</span>
+            <div class="billing-toggle-btn">
+              <div class="billing-toggle-btn-thumb"></div>
+            </div>
+            <span class="yearly-text">Yearly</span>
+          </div>
+        </div>
+
+        <div class="content hide">
+          <h2 class="content-title">Pick add-ons</h2>
+
+          <p class="content-info">Add-ons help enhance your gaming experience.</p>
+
+          <div class="add-ons-wrapper">
+            <label class="add-ons" for="onlineService">
+              <input type="checkbox" name="onlineService" id="onlineService" class="add-ons-checkbox" checked />
+              <div class="add-ons-details">
+                <span class="add-ons-title">Online service</span>
+                <span class="add-ons-info">Access to multiplayer games</span>
+              </div>
+              <span class="add-ons-price">+$1/mo</span>
+            </label>
+
+            <label class="add-ons" for="largerStorage">
+              <input type="checkbox" name="largerStorage" id="largerStorage" class="add-ons-checkbox" checked />
+              <div class="add-ons-details">
+                <span class="add-ons-title">Larger Storage</span>
+                <span class="add-ons-info">Extra 1TB of cloud save</span>
+              </div>
+              <span class="add-ons-price">+$2/mo</span>
+            </label>
+
+            <label class="add-ons" for="customizableProfile">
+              <input type="checkbox" name="customizableProfile" id="customizableProfile" class="add-ons-checkbox" />
+              <div class="add-ons-details">
+                <span class="add-ons-title">Customizable Profile</span>
+                <span class="add-ons-info">Custom theme on your profile</span>
+              </div>
+              <span class="add-ons-price">+$2/mo</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="content hide">
+          <h2 class="content-title">Finishing Up</h2>
+
+          <p class="content-info">Double-check everything looks OK before confirming.</p>
+
+          <div class="selected-plan-addons-wrapper">
+            <div class="selected-plan-box">
+              <div class="selected-plan-details">
+                <span class="selected-plan-title">Arcade (Monthly)</span>
+                <div class="selected-plan-change-btn">Change</div>
+              </div>
+              <span class="selected-plan-price">$9/mo</span>
+            </div>
+
+            <div class="line-break"></div>
+
+            <div class="selected-addons-box">
+              <div class="selected-addons">
+                <span class="selected-addons-title">Online service</span>
+                <span class="selected-addons-price">+$1/mo</span>
+              </div>
+
+              <div class="selected-addons">
+                <span class="selected-addons-title">Larger Storage</span>
+                <span class="selected-addons-price">+$2/mo</span>
+              </div>
+
+              <div class="selected-addons">
+                <span class="selected-addons-title">Customizable Profile Storage</span>
+                <span class="selected-addons-price">+$2/mo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="total-price-box">
+            <span class="total-text">Total (per month)</span>
+            <span class="total-price">$12/mo</span>
+          </div>
+        </div>
+
+        <div class="content hide">
+          <div class="confirm-message-box">
+            <div class="checkmark-icon-wrapper">
+              <div class="checkmark-icon-box">
+                <img src="./assets/images/icon-checkmark.svg" alt="Checkmark Icon">
+              </div>
+            </div>
+
+            <h2 class="content-title">Thank you!</h2>
+
+            <p class="content-info">Thanks for confirming your subscription!
+              We hope you have fun using our platform. If you ever need support, please feel free to email us at
+              support@loremgaming.com
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="outlet-bottom-container">
+        <div class="btns-wrapper">
+          <div class="go-back-btn">Go Back</div>
+          <button class="next-step-btn">Next Step</button>
+          <button class="confirm-btn">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer> -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
