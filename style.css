@@ -472,7 +472,7 @@ input.add-ons-checkbox {
         background: var(--magnolia);
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        /* gap: 2rem; */
         align-items: center;
         justify-content: center;
     }
@@ -591,6 +591,7 @@ input.add-ons-checkbox {
 .attribution {
     font-size: 11px;
     text-align: center;
+    margin-top: 1rem;
 }
 
 .attribution a {
